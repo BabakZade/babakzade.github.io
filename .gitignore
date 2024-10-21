@@ -1,0 +1,57 @@
+# Hugo-generated files
+/public/
+# Hugo resources
+/resources/_gen/
+
+# Node.js modules
+/node_modules/
+
+# Package manager folder
+/vendor/
+
+# Hugo cache
+/hugo_cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE settings
+.vscode/
+.idea/
+*~
+
+# Miscellaneous
+.sass-cache/
+
+
+# Ignore compiled or minified files (if you're generating them)
+static/*.min.js
+static/*.min.css
+
+# Ignore temporary and backup files
+static/*~
+static/.DS_Store
+static/Thumbs.db
+
+
+
+# Ignore video files
+static/**/*.mp4
+static/**/*.avi
+static/**/*.mov
+static/**/*.mkv
+
+# Ignore image files
+static/**/*.png
+static/**/*.jpg
+static/**/*.jpeg
+static/**/*.gif
+static/**/*.bmp
+static/**/*.svg
+
+# Ignore audio files
+static/**/*.mp3
+static/**/*.wav
+static/**/*.flac
+static/**/*.aac
