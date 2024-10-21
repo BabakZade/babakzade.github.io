@@ -1,0 +1,76 @@
+main:
+  - name: Code Sample
+    pageRef: /codeSample
+    pre: terminal
+    weight: 10
+  - name: Data Science
+    pageRef: /codeSample/dataScience
+    pre: table_chart_view
+    parent: Code Sample
+  - name: Optimization
+    pageRef: /codeSample/MIPFormulation
+    pre: developer_board
+    parent: Code Sample
+
+  - name: Courses
+    pageRef: /courses
+    pre: school
+    weight: 20
+  - name: DevOp
+    pageRef: /courses/devOp
+    pre: analytics
+    parent: Courses
+    weight: 21
+  - name: Statistic
+    pageRef: /courses/statistics
+    pre: candlestick_chart
+    weight: 22
+    parent: Courses
+  - name: Operations Research
+    pageRef: /courses/operationsReserach
+    pre: developer_board
+    parent: Courses
+    weight: 23
+  - name: ToDo
+    pageRef: /courses/ToDo
+    pre: edit_note
+    parent: Courses
+    weight: 24
+
+  - name: About
+    pageRef: /about/
+    pre: person_play
+    weight: 30
+  - name: CV
+    pageRef: /about/CV
+    pre: user_attributes
+    parent: About
+    weight: 31
+  - name: Resume
+    pageRef: /about/Resume
+    pre: person_book
+    parent: About
+    weight: 32
+  - name: Scholar
+    pageRef: /about/Papers
+    pre: contract_edit
+    parent: About
+    weight: 33
+  - name: Hobbies
+    pageRef: /about/Hobbies
+    pre: sports_esports
+    parent: About
+    weight: 34
+
+
+
+About me:
+  - name: Resume
+    pageRef: /about/Resume
+  - name: CV
+    pageRef: /about/CV
+see me elsewhere:
+  - name: Email
+    url: babak.zade@outlook.com
+  - name: GitHub
+    url: https://github.com/BabakZade

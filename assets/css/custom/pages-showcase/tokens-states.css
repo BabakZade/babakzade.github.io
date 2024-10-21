@@ -1,0 +1,25 @@
+.state-opacities-container {
+  display: grid;
+  grid-template-columns: fit-content(10%) 1fr;
+  gap: var(--size-3);
+  margin: var(--spacing-panes);
+  padding: var(--spacing-panes);
+  border-radius: var(--shape-corner-m);
+  background: var(--color-surface-container-lowest);
+
+  & div,
+  & span {
+    border-radius: inherit;
+    padding: var(--spacing-panes);
+  }
+
+  & span {
+    text-align: right;
+    background: var(--color-surface-container);
+  }
+
+  & div {
+    background: var(--color-surface-container-high);
+    color: var(--color-on-surface);
+  }
+}

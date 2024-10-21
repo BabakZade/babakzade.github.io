@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Collage with Enlarging Images</title>
+    <script>
+        // Function to toggle the size of the image on click
+        function toggleImageSize(img) {
+            if (img.classList.contains('enlarged')) {
+                // Shrink the image if it's already enlarged
+                img.style.width = img.getAttribute('width') + 'px';
+                img.style.height = img.getAttribute('height') + 'px';
+                img.classList.remove('enlarged');
+            } else {
+                // Enlarge the image
+                img.style.width = (img.getAttribute('data-original-width') * 3) + 'px';
+                img.style.height = (img.getAttribute('data-original-height') * 3) + 'px';
+                img.classList.add('enlarged');
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Table layout for collage with clickable images that enlarge on click -->
+    <table cellspacing="20"> <!-- Adjust the number for more or less space between images -->
+
+        
+        <tr>
+            <td>
+                <img src="/hobbies/photo.jpg" alt="Photo" width="200" height="300" hspace="10" vspace="10"
+                    onclick="toggleImageSize(this)" data-original-width="400" data-original-height="250">
+            </td>
+            <td>
+                <img src="/hobbies/photo3.jpg" alt="Photo" width="200" height="150" hspace="10" vspace="10"
+                    onclick="toggleImageSize(this)" data-original-width="200" data-original-height="150">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="/hobbies/photo.jpg" alt="Photo" width="200" height="300" hspace="10" vspace="10"
+                    onclick="toggleImageSize(this)" data-original-width="200" data-original-height="300">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <img src="/hobbies/khat.jpg" alt="Khat" width="500" height="200" hspace="10" vspace="10"
+                    onclick="toggleImageSize(this)" data-original-width="500" data-original-height="200">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="/hobbies/khat.jpg" alt="Khat" width="300" height="200" hspace="10" vspace="10"
+                    onclick="toggleImageSize(this)" data-original-width="300" data-original-height="200">
+            </td>
+            <td>
+                <img src="/hobbies/photo.jpg" alt="Photo" width="200" height="150" hspace="10" vspace="10"
+                    onclick="toggleImageSize(this)" data-original-width="200" data-original-height="150">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <video width="640" height="480" controls>
+                    <source src="/hobbies/Gym.mp4" type="video/mp4">
+                </video>
+            </td>
+        </tr>
+    </table>
+
+
+</body>
+
+</html>

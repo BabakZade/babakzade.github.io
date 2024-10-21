@@ -1,0 +1,53 @@
+author:
+  name: Babak Zade
+  email: Babak.Zade@outlook.com
+
+assets:
+  favicon: sitelogo.svg
+
+dateFormat: January 2, 2006
+debug: false
+description: "my site"
+
+fuseOpts:
+  isCaseSensitive: false
+  includeScore: true
+  includeMatches: true
+  minMatchCharLength: 1
+  shouldSort: true
+  findAllMatches: false
+  keys: ["title", "section", "permalink", "description", "summary", "content"]
+  location: 0
+  threshold: 0.6
+  distance: 100
+  ignoreLocation: false
+  limit: 12
+
+home:
+  title: Babak Zade
+  tagline: A Data Scientist and Operations Research Specialist
+  background: "static/myPic.jpg"
+  content : "I hold a Ph.D. in Business Economics with a focus on the application of Operations Research in healthcare and other industries. As an Operations Research Specialist, Optimization Algorithm Engineer, and Solution Methodologist, I have extensive experience designing and developing optimization algorithms across various domains. My most recent achievement was the development of an optimization module, which has been successfully integrated into administrative software at the Medical School of Ghent University.\n
+             
+             In addition to my expertise in operations research, I have developed a growing interest in data science. I recognize the significant overlap between data science and operations research, particularly in their ability to improve computational efficiency. To further explore this intersection, I have developed my own packages for linear regression, logistic regression, and neural networks from scratch. Although I could have used established libraries such as TensorFlow or Scikit-learn, implementing these algorithms manually provided me with a deeper understanding and enhanced my skills. You can find samples of my work on my GitHub.\n
+             
+             I am actively seeking opportunities in the data science field to continue developing my skills and contribute to innovative projects."
+
+
+
+
+#  buttons:
+#    About:
+#      - name: CV
+#        url: /about/CV
+#        icon: user_attributes
+#      - name: Resume
+#        url: /about/Resume
+#        icon: person_book
+#    Code Sample:
+#      - name: Data Science
+#        url: /codeSample/dataScience
+#        icon: table_chart_view
+#      - name: Optimization
+#        url: /codeSample/MIPFormulation
+#        icon: developer_board

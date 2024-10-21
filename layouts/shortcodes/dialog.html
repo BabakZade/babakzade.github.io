@@ -1,0 +1,28 @@
+
+
+
+<div class="layout showcase-components">
+<dialog class="component dialog" open>
+    <i class="icon">{{ .Get "icon" }}</i>
+    <span class="headline">{{ .Get "headline" }}</span>
+    
+    <div class="supporting-text" >
+        {{ .Get "content" }}
+    </div>
+
+    <!-- Text Input Field for Name -->
+    <div class="input-field">
+        <label for="name">{{ .Get "inputLabel" }}</label>
+        <input type="text" id="name" name="name" placeholder="{{ .Get "inputPlaceholder" }}">
+    </div>
+
+    <span class="actions">        
+        <!-- Download PDF Button -->
+        <a class="component button common" download href="{{ .Get "pdfLink" }}">{{ .Get "pdfButton" }}</a>
+        
+        <!-- External Link Button -->
+        <a class="component button common" href="{{ .Get "linkUrl" }}" target="_blank">{{ .Get "linkButton" }}</a>
+    </span>
+</dialog>
+
+</div>

@@ -1,0 +1,46 @@
+<div class="layout showcase-components" id="cards">
+    <div class="component card elevated" {{ if .Get "stacked" }}stacked{{ end }}>
+        <div class="content">
+            {{ if .Get "Abr" }}
+            <div class="monogram">{{ .Get "Abr" }}</div>
+            {{ end }}
+
+            <div class="text">
+                {{ if .Get "Header" }}
+                <div class="header">{{ .Get "Header" }}</div>
+                {{ end }}
+                {{ if .Get "SubHead" }}
+                <div class="subhead">{{ .Get "SubHead" }}</div>
+                {{ end }}
+            </div>
+        </div>
+
+        {{ if .Get "MiddleImg" }}
+        <div class="media">
+            <i class="icon">{{ .Get "MiddleImg" }}</i>
+        </div>
+        {{ end }}
+
+        <div class="text-content">
+            <div class="titles">
+                {{ if .Get "Title" }}
+                <div class="title">{{ .Get "Title" }}</div>
+                {{ end }}
+                {{ if .Get "Subtitle" }}
+                <div class="subtitle">{{ .Get "Subtitle" }}</div>
+                {{ end }}
+            </div>
+
+            <div class="body">
+                {{ .Get "MainBody" }}
+            </div>
+
+            <div class="actions">
+                <a href="{{ .Get "Link" }}" style="display: inline;">
+                    <i class="icon" style="display: inline;"> {{ .Get "IconName" }}</i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>

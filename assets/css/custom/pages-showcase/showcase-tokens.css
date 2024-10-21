@@ -1,0 +1,92 @@
+.showcase-tokens {
+  --layout-flex: initial;
+  --layout-display: flex;
+  --layout-flex-flow: column nowrap;
+  --layout-align-items: stretch;
+  --layout-align-content: initial;
+  --layout-justify-content: initial;
+  --layout-width: 100%;
+  --layout-height: initial;
+  --layout-min-height: initial;
+  --layout-padding: initial;
+  --layout-margin: initial;
+  --layout-gap: initial;
+
+  --layout-shape: var(--shape-corner-xl);
+  --layout-border: initial;
+
+  --layout-bg: var(--color-showcase-tokens-container);
+
+  margin-block: var(--size-3);
+  overflow-x: auto;
+
+  .showcase-tokens-title {
+    flex: 1 1 0;
+    display: flex;
+    flex-flow: row nowrap; 
+    width: 100%;
+    font-family: var(--typescale-headline-small-font);
+    font-size: var(--typescale-headline-small-size);
+    font-weight: var(--typescale-headline-small-weight);
+    line-height: var(--typescale-headline-small-line-height);
+    color: var(--color-on-surface);
+    background: var(--color-surface-container-low);
+    box-shadow: var(--elevation2);
+    
+    &:hover {
+      background: var(--color-surface-container);
+      box-shadow: var(--elevation3);
+    }
+  }
+
+  & summary {
+    cursor: pointer;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: var(--size-3) var(--size-5);
+    border-radius: var(--shape-corner-xl);
+    align-items: center;
+    justify-content: space-between;
+
+    &::after {
+      content: "▲";
+      font-size: var(--size-5);
+    }
+
+    &::marker,
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  
+    ~ .showcase-tokens {
+      padding-left: var(--spacing-panes);
+
+      .showcase-tokens-title {
+        font-family: var(--typescale-title-large-font);
+        font-size: var(--typescale-title-large-size);
+        font-weight: var(--typescale-title-large-weight);
+        line-height: var(--typescale-title-large-line-height);
+      }
+    }
+  }
+
+  &[open] {
+    .showcase-tokens-title {
+      background: var(--color-surface-container-high);
+      box-shadow: var(--elevation0);
+      
+      &:hover {
+        background: var(--color-surface-container-highest);
+        box-shadow: var(--elevation1);
+      }
+    }
+
+    & summary::after {
+      content: "▼";
+    }
+  }
+}
