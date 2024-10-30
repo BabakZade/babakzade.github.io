@@ -1,0 +1,5 @@
+# config.toml for Hugo
+baseURL = "https://babakzade.github.io/"
+languageCode = "en-us"
+title = "BabakZade Website"  # Replace with your preferred site title
+theme = "hugo-PolyRhythmic"

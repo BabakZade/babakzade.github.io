@@ -1,57 +1,22 @@
-# Hugo-generated files
-/public/
-# Hugo resources
-/resources/_gen/
+# Ignore Python bytecode files
+__pycache__/
+*.py[cod]
 
-# Node.js modules
-/node_modules/
+# Ignore virtual environments
+venv/
+env/
+*/venv/
+*/env/
 
-# Package manager folder
-/vendor/
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
 
-# Hugo cache
-/hugo_cache/
+# Ignore logs and temporary files
+*.log
+*.tmp
 
-# OS files
-.DS_Store
-Thumbs.db
+# Ignore the data folder
+data/
 
-# Editor/IDE settings
-.vscode/
-.idea/
-*~
-
-# Miscellaneous
-.sass-cache/
-
-
-# Ignore compiled or minified files (if you're generating them)
-static/*.min.js
-static/*.min.css
-
-# Ignore temporary and backup files
-static/*~
-static/.DS_Store
-static/Thumbs.db
-
-
-
-# Ignore video files
-static/**/*.mp4
-static/**/*.avi
-static/**/*.mov
-static/**/*.mkv
-
-# Ignore image files
-static/**/*.png
-static/**/*.jpg
-static/**/*.jpeg
-static/**/*.gif
-static/**/*.bmp
-static/**/*.svg
-
-# Ignore audio files
-static/**/*.mp3
-static/**/*.wav
-static/**/*.flac
-static/**/*.aac
+# Ignore all CSV files
+*.csv

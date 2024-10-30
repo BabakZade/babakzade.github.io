@@ -2,7 +2,7 @@
 {{ $home := site.Params.home }}
 <article class="layout panes basic-single-pane" id="home-page">
   <section class="layout pane">
-    <div style="background-image: url('{{ site.Params.assets.backgroundImage | default "background2.jpg" | absURL }}'); 
+    <div style="background-image: url('{{ site.Params.assets.backgroundImage | default "background.jpg" | absURL }}'); 
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
@@ -37,7 +37,7 @@
 
       {{/* Site content */}}
       {{ with $home.content }}
-      <span style = "font-size: 18px; line-height: 2; width: 50%; display: inline-block;text-align: justify;">
+      <span style = "font-size: 18px; line-height: 2; width: 50%; display: inline-block;text-align: justify;background-color:rgba(200, 200, 200, 0.9);">
         {{ . | markdownify }}
       </span>
       {{ end }}
@@ -71,6 +71,7 @@
     <section class="home-buttons-container">
       {{- partialCached "homepage-buttons.html" $home -}}
     </section>
+
   </div>
   </section>
 </article>

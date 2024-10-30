@@ -4,72 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Collage with Enlarging Images</title>
-    <script>
-        // Function to toggle the size of the image on click
-        function toggleImageSize(img) {
-            if (img.classList.contains('enlarged')) {
-                // Shrink the image if it's already enlarged
-                img.style.width = img.getAttribute('width') + 'px';
-                img.style.height = img.getAttribute('height') + 'px';
-                img.classList.remove('enlarged');
-            } else {
-                // Enlarge the image
-                img.style.width = (img.getAttribute('data-original-width') * 3) + 'px';
-                img.style.height = (img.getAttribute('data-original-height') * 3) + 'px';
-                img.classList.add('enlarged');
-            }
+    <title>Masonry Photo Collage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
         }
-    </script>
+
+        /* Grid container for masonry collage */
+        .masonry-collage {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns */
+            grid-auto-rows: 150px; /* Base row height */
+            gap: 10px; /* Space between the images */
+            padding: 20px;
+        }
+
+        .masonry-collage img, .masonry-collage video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures image and video fills the grid cell */
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* Custom sizes for each image/video based on the design in your provided layout */
+        .img1 {
+            grid-column: span 1;
+            grid-row: span 2;
+        }
+
+        .img2 {
+            grid-column: span 1;
+            grid-row: span 2;
+        }
+
+        .img3 {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .img4 {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        .img5 {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        .img6 {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        .img7 {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .img8 {
+            grid-column: span 1;
+            grid-row: span 2;
+        }
+
+        .img9 {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        .img10 {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        /* Hover effect to enlarge the images */
+        .masonry-collage img:hover, .masonry-collage video:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Table layout for collage with clickable images that enlarge on click -->
-    <table cellspacing="20"> <!-- Adjust the number for more or less space between images -->
+    <div class="masonry-collage">
+        <img src="/hobbies/photo.jpg" alt="Photo 1" class="img1">
+        <img src="/hobbies/photo3.jpg" alt="Photo 2" class="img2">
+        <img src="/hobbies/photo.jpg" alt="Photo 3" class="img3">
+        <img src="/hobbies/khat.jpg" alt="Khat 1" class="img4">
+        <img src="/hobbies/khat.jpg" alt="Khat 2" class="img5">
+        <img src="/hobbies/photo.jpg" alt="Photo 4" class="img6">
 
-        
-        <tr>
-            <td>
-                <img src="/hobbies/photo.jpg" alt="Photo" width="200" height="300" hspace="10" vspace="10"
-                    onclick="toggleImageSize(this)" data-original-width="400" data-original-height="250">
-            </td>
-            <td>
-                <img src="/hobbies/photo3.jpg" alt="Photo" width="200" height="150" hspace="10" vspace="10"
-                    onclick="toggleImageSize(this)" data-original-width="200" data-original-height="150">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="/hobbies/photo.jpg" alt="Photo" width="200" height="300" hspace="10" vspace="10"
-                    onclick="toggleImageSize(this)" data-original-width="200" data-original-height="300">
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <img src="/hobbies/khat.jpg" alt="Khat" width="500" height="200" hspace="10" vspace="10"
-                    onclick="toggleImageSize(this)" data-original-width="500" data-original-height="200">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="/hobbies/khat.jpg" alt="Khat" width="300" height="200" hspace="10" vspace="10"
-                    onclick="toggleImageSize(this)" data-original-width="300" data-original-height="200">
-            </td>
-            <td>
-                <img src="/hobbies/photo.jpg" alt="Photo" width="200" height="150" hspace="10" vspace="10"
-                    onclick="toggleImageSize(this)" data-original-width="200" data-original-height="150">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <video width="640" height="480" controls>
-                    <source src="/hobbies/Gym.mp4" type="video/mp4">
-                </video>
-            </td>
-        </tr>
-    </table>
+        <!-- Video at img7 position -->
+        <video class="img7" controls>
+            <source src="/hobbies/Gym.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
+        <img src="/hobbies/khat.jpg" alt="Khat 3" class="img8">
+        <img src="/hobbies/photo.jpg" alt="Photo 6" class="img9">
+        <img src="/hobbies/photo3.jpg" alt="Photo 7" class="img10">
+    </div>
 
 </body>
 
